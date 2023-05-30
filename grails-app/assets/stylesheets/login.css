@@ -1,0 +1,317 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: roboto;
+	/*Add*/
+	width:100%;
+	height: 100%;
+}
+a:hover,
+a:focus {
+	text-decoration: none;
+	color: #eee;
+}
+
+.info_small{	
+	background: url(../images/info_small.png) no-repeat right top !important;
+	text-indent:30px; 
+}
+
+.login-footer{
+	padding-left:10px;
+	padding-right:10px;
+	width: 100%;
+	color: #a7a7a7;
+	position: absolute;
+	bottom: 0;
+}
+
+.login-card {
+    min-width: 450px;
+    position: relative;
+    z-index: 2;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: roboto!important;
+}
+.login-card:after {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    opacity: 0.8;
+    z-index: 3;
+}
+.login-card > form {
+	padding-top:0px;
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    text-align: center;
+	position:relative;
+	top:0px;
+}
+.logo-kapsul {
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	opacity: 0.8;
+}
+.logo {
+	height: auto;
+	padding: 50px 0px;
+}
+
+.title {
+	margin: 0 auto;
+	width: 370px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.group {
+	margin: 0 auto;
+	width: 370px;
+	position: relative;
+	margin-bottom: 25px;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+    background: none !important;
+    border-color: none !important;
+    color: red !important;
+}
+
+.group > input {
+	font-size: 18px	!important;
+	padding: 10px 10px 10px 10px !important;
+	display: block !important;
+	width: 100% !important;
+	border: none !important;
+	border-bottom: 1px solid #a7a7a7 !important;
+	background-color: none !important;
+	color: #a7a7a7 !important;
+	height: 45px !important;
+	min-height: 45px !important;
+}
+
+.group > input:focus, .group > input:hover {
+	outline: none !important;
+	border: none !important;
+	border-bottom: 1px solid #a7a7a7 !important;
+	text-decoration: none;
+	-webkit-box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	box-shadow: none !important;
+	height: 45px !important;
+	min-height: 45px !important;
+}
+
+.title > label {
+	color: #76bc1e !important;
+	font-size: 30px;
+	font-weight: normal;
+	pointer-events: none;
+	width: 100%;
+	text-align:center;
+}
+
+.title > span  {
+	color: #a7a7a7 !important;
+	font-size: 18px;
+}
+
+.group > label {
+	color: #76bc1e !important;
+	font-size: 18px;
+	font-weight: normal;
+	position: absolute;
+	pointer-events: none;
+	left: 5px;
+	top: 5px;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+
+.group > input:focus ~ label, input:valid ~ label {
+	top: -20px;
+	font-size: 14px;
+	color: #76bc1e !important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	input[type=password]:-webkit-autofill ~ label:not(.md-no-float) {
+		top: -20px;
+		font-size: 14px;
+		color: #76bc1e !important;
+	}
+}
+/* BOTTOM BARS ================================= */
+.bar {
+	position: relative;
+	display: block;
+	width: 100%;
+}
+.red:before,
+.red:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #f58f48;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+.green:before,
+.green:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #76bc1e;
+	transition: 0.2s ease all;
+	-moz-transition: 0.2s ease all;
+	-webkit-transition: 0.2s ease all;
+}
+.bar:before {
+	left: 50%;
+}
+.bar:after {
+	right: 50%;
+}
+
+/* active durum bar */
+
+.group input:focus ~ .bar:before,
+.group input:focus ~ .bar:after {
+	width: 50%;
+}
+/* HIGHLIGHTER ================================== */
+
+.highlight {
+	position: absolute;
+	height: 0%;
+	width: 100px;
+	top: 25%;
+	left: 0;
+	pointer-events: none;
+	opacity: 0.5;
+}
+/* active durum */
+
+.group > input:focus ~ .highlight {
+	-webkit-animation: inputHighlighter 0.3s ease;
+	-moz-animation: inputHighlighter 0.3s ease;
+	animation: inputHighlighter 0.3s ease;
+}
+/* form animasyon ================ */
+
+@-webkit-keyframes inputHighlighter {
+	from {
+		background: #a7a7a7;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+@-moz-keyframes inputHighlighter {
+	from {
+		background: #a7a7a7;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+@keyframes inputHighlighter {
+	from {
+		background: #a7a7a7;
+	}
+	to {
+		width: 0;
+		background: transparent;
+	}
+}
+.input-ikon {
+	font-size: 25px!important;
+	position: relative;
+}
+.input-sifre-ikon {
+	font-size: 22px!important;
+	position: relative;
+}
+.span-input {
+	margin-left: 10px;
+	position: relative;
+	top: -5px;
+}
+.giris-yap-buton,
+.kayit-ol-buton,
+.sifre-hatirlat-buton {
+	width: 370px;
+	background: #76bc1e;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #eee;
+	font-family: roboto;
+	font-weight: 100;
+	padding: 10px;
+	border-radius: 20px;
+	outline: none;
+	opacity: 0.8;
+	margin: 0 auto;
+	font-size: 18px;
+}
+.forgot-and-create {
+	margin: 10px 0px;
+}
+.forgot-and-create a {
+	color: #a7a7a7;
+	font-size: 12px;
+	text-decoration: none;
+	font-weight: 100;
+	margin-right: 10px;
+}
+.zaten-hesap-var-link {
+	color: #a7a7a7;
+	font-size: 14px;
+	text-decoration: none;
+	display: block;
+}
+
+/* background index ================ */
+.background-image-login{
+	background: url(../images/fondo_incio.jpg) no-repeat;
+	height: 100%;
+	min-height: 550px;
+	-moz-background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.form-login-style{
+	width: 30%;
+	background-color: white;
+	border-radius: 15px;
+	left: 33%;
+	top: 15px;
+	height: 95%;
+	
+}
+

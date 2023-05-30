@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="listado_plantas" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="5" uuid="7d54b42e-ec64-4d8c-86a2-bf6010c1d8d3">
+	<property name="ireport.zoom" value="1.2100000000000044"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT e.*, em.nombre as empresa_nombre, es.nombre as establecimiento_nombre, u.nombre FROM embarques as e, empresas as em , establecimientos as es, userlg as u
+where e.empresa_id = em.id and e.establecimiento_id = es.id and e.id_autor = u.id]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="date_created" class="java.sql.Timestamp"/>
+	<field name="empresa_id" class="java.lang.String"/>
+	<field name="establecimiento_id" class="java.lang.String"/>
+	<field name="fecha_hora_entrega" class="java.sql.Timestamp"/>
+	<field name="id_autor" class="java.lang.Long"/>
+	<field name="last_updated" class="java.sql.Timestamp"/>
+	<field name="empresa_nombre" class="java.lang.String"/>
+	<field name="establecimiento_nombre" class="java.lang.String"/>
+	<field name="nombre" class="java.lang.String"/>
+	<variable name="direccion_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="70" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Transparent" x="140" y="0" width="608" height="38" forecolor="#808080" backcolor="#FFFFFF" uuid="d62eae27-c099-49ba-a201-7a3b89f18170"/>
+				<textElement textAlignment="Right">
+					<font size="24" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Lista de embarques]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="140" y="32" width="612" height="20" uuid="817c1cef-19d0-490c-9839-f6195d2bc949"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="-19" y="66" width="789" height="1" forecolor="#355EB3" uuid="c427cbfc-cfe7-4fd6-bdc9-05a1ed6d1077"/>
+				<graphicElement>
+					<pen lineWidth="5.0" lineColor="#B4D048"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="-19" y="59" width="789" height="1" forecolor="#70C4E7" uuid="aa8846d0-dc13-41fb-bd1f-f6600467976f"/>
+				<graphicElement>
+					<pen lineWidth="10.0" lineColor="#76BC1E"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="21" splitType="Stretch">
+			<staticText>
+				<reportElement x="646" y="0" width="103" height="20" uuid="91bc2bae-1dda-4ca3-9f01-cf805caa1d5a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Autor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="0" width="190" height="20" uuid="a5507509-b184-45a8-943a-fa1ea604e976"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Establecimiento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="85" y="0" width="194" height="20" uuid="4484da01-e216-470f-96de-1da121a2105d"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="0" width="142" height="20" uuid="86b78b1f-0599-4dd1-b41f-f642180e2be3"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha de entrega]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="0" width="71" height="20" uuid="f8aeace3-ae3c-427f-8156-f412ec9e456f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch"/>
+	</detail>
+	<pageFooter>
+		<band height="58">
+			<textField>
+				<reportElement x="628" y="11" width="80" height="20" forecolor="#FFFFFF" uuid="988f559f-d853-482e-9421-a58839b4d1f8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="708" y="11" width="40" height="20" forecolor="#FFFFFF" uuid="043287bb-03af-4fff-89f7-f86411de5b9a"/>
+				<textElement verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<noData>
+		<band height="23">
+			<staticText>
+				<reportElement x="2" y="0" width="570" height="15" uuid="8c65343f-d78a-45f1-9ac2-8ed527bd20f7"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[No existen registros que mostrar por el momento]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>

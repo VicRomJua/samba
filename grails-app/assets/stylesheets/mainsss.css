@@ -1,0 +1,1000 @@
+/* FONT STACK */
+body,
+input, select, textarea {
+    font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+}
+
+/* BASE LAYOUT */
+
+
+html * {
+    margin: 0;
+}
+
+body {
+	background-color: #fff;
+    color: #333333;
+    overflow-x: hidden; /* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide */
+}
+
+#grailsLogo {
+    background-color: #abbf78;
+}
+
+a:hover, a:active {
+    outline: none; /* prevents outline in webkit on active links but retains it for tab focus */
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-size: 1.25em;
+}
+
+ul {
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+/* GENERAL */
+
+#grailsLogo a {
+    display: inline-block;
+    margin: 1em;
+}
+
+.content {
+	padding-bottom: 20px;
+}
+
+.content h1 {
+    border-bottom: 1px solid #CCCCCC;
+    margin: auto auto;
+    width:98%;
+}
+
+.scaffold-list h1 {
+    border: none;
+}
+
+.footer {
+    background: #FFFFFF;
+    color: #a7a7a7;
+    clear: both;
+    font-size: 0.8em;
+    padding: 1em;
+    min-height: 1em;
+    border-top: 5px solid #76bc1e;
+}
+
+.footer a {
+    color: #76bc1e;
+}
+
+.spinner {
+    background: url(../images/spinner.gif) 50% 50% no-repeat transparent;
+    height: 16px;
+    width: 16px;
+    padding: 0.5em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-indent: -9999px;
+}
+
+.operations_icon {
+	background-color:#005EB8;
+	cursor: pointer; cursor: hand;
+	color:white;
+	padding:4px 6px;
+	-moz-border-radius: 4px 4px;
+    -webkit-border-radius: 4px 4px;
+    border-radius: 4px 4px;
+}
+
+.operations_icon:hover, .operations_icon:focus {
+	background-color:#1183C9;
+	color:white;
+}
+
+.operations_icon.gray{
+	background-color:#E1E1E1;
+}
+
+.operations_icon.red{
+	background-color:#DA291C;
+}
+
+.operations_icon.red:hover{
+	background-color:#E4002B;
+}
+
+.operations_icon.green{
+	background-color: #6BA539;
+}
+
+.operations_icon.yellow{
+	background-color: #FFD100;
+}
+
+.calendar_item{
+	text-align: center;
+	padding:0px;
+	margin:0px;
+	margin-right:1px;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width:30px;
+	height:65px;
+	display:inline-block;
+}
+
+/* NAVIGATION MENU */
+
+.nav {
+    zoom: 1;
+}
+
+.nav ul {
+    overflow: hidden;
+    padding-left: 0;
+    zoom: 1;
+}
+
+.nav li {
+    display: block;
+    float: left;
+    list-style-type: none;
+    margin-right: 0.5em;
+    padding: 0;
+}
+
+.nav a {
+    color: #666666;
+    display: block;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.nav a:active, .nav a:visited {
+    color: #666666;
+}
+
+.nav a:focus, .nav a:hover {
+    background-color: #851f38;
+    font-weight: normal;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.no-borderradius .nav a:focus, .no-borderradius .nav a:hover {
+    background-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+}
+
+.nav a.home, .nav a.list, .nav a.create, .nav a.import, .nav a.password {
+    background-position: 0.7em center;
+    background-repeat: no-repeat;
+    text-indent: 25px;
+}
+
+.nav a.home {
+    background-image: url(../images/skin/house.png);
+}
+
+.nav a.list {
+    background-image: url(../images/skin/database_table.png);
+}
+
+.nav a.create {
+    background-image: url(../images/skin/database_add.png);
+}
+
+.nav a.import {
+    background-image: url(../images/skin/import.png);
+}
+
+.nav a.password {
+    background-image: url(../images/skin/password.png);
+}
+
+.nav li.dropdown.open ul.dropdown-menu {
+    background-color: #0E0E0E;
+    border:none;
+    border-top: 2px solid #851f38;
+    
+}
+
+.nav_topbar {
+	background-color: #e1e1e1;
+    padding: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    min-height: 48px;
+    border: none;
+
+    -moz-border-radius: 0.5em 0.5em 0.0em 0.0em;
+    -webkit-border-radius: 0.5em 0.5em 0.0em 0.0em;
+    border-radius: 0.5em 0.5em 0.0em 0.0em;
+}
+
+.nav_topbar > ul {
+    /*overflow: hidden;*/
+    padding-left: 0;
+    zoom: 1;
+}
+
+.nav_topbar > ul > li {
+    display: inline-block;
+    float: left;
+    list-style-type: none;
+    margin-right: 0.5em;
+    padding: 0;
+}
+
+.nav_topbar > ul > li > a {
+	color: #fff;
+	background-color: #005EB8;
+	border-color: #005EB8;
+    cursor: pointer; cursor: hand;
+    display: inline-block;
+    margin: 0 0.25em 0;
+    overflow: visible;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    line-height: 28px;
+	min-height: 38px;
+	font-size: 14px;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.nav_topbar a.create{
+	border: 1px solid #6BA539;
+    background-color: #6BA539;
+    color: #ffffff;
+}
+.nav_topbar a.create:focus, .nav_topbar a.create:hover{
+	border: 1px solid #78BE20;
+    background-color: #78BE20;
+}
+
+.nav_topbar a.delete{
+	border: 1px solid #DA291C;
+    background-color: #DA291C;
+    color: #ffffff;
+}
+.nav_topbar a.delete:focus, .nav_topbar a.delete:hover{
+	border: 1px solid #E4002B;
+    background-color: #E4002B;
+}
+
+.nav_topbar > ul >li > a:focus, .nav_topbar > ul >li > a:hover  {
+	background-color: #0086CC;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: normal;
+}
+
+.no-borderradius .nav_topbar a:focus, .no-borderradius .nav_topbar a:hover {
+    background-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+}
+
+.nav_topbar a.home, .nav_topbar a.list, .nav_topbar a.create, .nav_topbar a.import, .nav_topbar a.password, .nav_topbar a.save, .nav_topbar a.edit, .nav_topbar a.delete {
+    background-position: 0.7em center;
+    background-repeat: no-repeat;
+}
+
+.nav_topbar a.print:before {
+    font-family: 'FontAwesome';
+	content: "\f02f";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.delete:before {
+    font-family: 'FontAwesome';
+	content: "\f1f8";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.edit:before {
+    font-family: 'FontAwesome';
+	content: "\f044";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.save:before {
+    font-family: 'FontAwesome';
+	content: "\f0c7";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.home:before {
+    font-family: 'FontAwesome';
+	content: "\f015";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.list:before {
+	font-family: 'FontAwesome';
+	content: "\f03a";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.create:before {
+	font-family: 'FontAwesome';
+	content: "\f067";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.import:before {
+    font-family: 'FontAwesome';
+	content: "\f093";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.password:before {
+    font-family: 'FontAwesome';
+	content: "\f084";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar a.close:before {
+    font-family: 'FontAwesome';
+	content: "\f00d";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.nav_topbar li.dropdown.open ul.dropdown-menu {
+    background-color: #0E0E0E;
+    border:none;
+    border-top: 2px solid #851f38;
+
+}
+/* CREATE/EDIT FORMS AND SHOW PAGES */
+fieldset,
+.property-list {
+    margin: 0.6em 1.25em 0 1.25em;
+    padding: 0.3em 1.8em 1.25em;
+    position: relative;
+    zoom: 1;
+    border: none;
+}
+
+.property-list .fieldcontain {
+    list-style: none;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.fieldcontain {
+    margin-top: 1em;
+}
+
+.fieldcontain label,
+.fieldcontain .property-label {
+    color: #666666;
+    text-align: right;
+    width: 25%;
+}
+
+.fieldcontain .property-label {
+    float: left;
+}
+
+.fieldcontain .property-value {
+    display: block;
+    margin-left: 27%;
+}
+
+label {
+    cursor: pointer; cursor: hand;
+    display: inline-block;
+    margin: 0 0.25em 0 0;
+}
+
+input:not([type="file"]):not([type="button"]):not([type="submit"]):not([type="radio"]):not([type="checkbox"]), select, textarea {
+	color: #515151;
+	background-color: #fff;
+	border: 1px solid #005EB8;
+    font-size: 14px;
+	height: 34px;
+	min-height: 34px;
+	padding: 3px 12px;
+}
+
+input:not([type="file"]):not([type="button"]):not([type="submit"]):hover, select:hover, textarea:hover {
+	border: 1px solid #005EB8;
+	text-decoration: none;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 187, 215, 0.75);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 187, 215, 0.75);
+	box-shadow: 0px 0px 5px rgba(0, 187, 215, 0.75);
+}
+
+input:not([type="file"]):not([type="button"]):not([type="submit"]):focus, select:focus, textarea:focus {
+	border: 1px solid #005EB8;
+	text-decoration: none;
+	-webkit-box-shadow: 0px 0px 5px rgba(0, 187, 215, 0.75);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 187, 215, 0.75);
+	box-shadow: 0px 0px 5px rgba(0, 187, 215, 0.75);
+}
+
+select {
+    padding: 0.2em 0.2em 0.2em 0;
+}
+
+select[multiple] {
+    vertical-align: top;
+}
+
+textarea {
+    width: 200px;
+    height: 60px;
+    overflow: auto; /* IE always renders vertical scrollbar without this */
+    vertical-align: top;
+}
+
+input[type=checkbox], input[type=radio] {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+input[type=button]:focus {
+    background-color: #ffffff;
+    border: 1px solid red;
+    outline: 0;
+    -moz-box-shadow: 0 0 0.5em #ffffff;
+    -webkit-box-shadow: 0 0 0.5em #ffffff;
+    box-shadow: 0 0 0.5em #ffffff;
+}
+
+.required-indicator {
+    color: #cc0000;
+    display: inline-block;
+    font-weight: bold;
+    margin-left: 0.3em;
+    position: relative;
+    top: 0.1em;
+}
+
+ul.one-to-many {
+    display: inline-block;
+    list-style-position: inside;
+    vertical-align: top;
+}
+
+ul.one-to-many li.add {
+    list-style-type: none;
+}
+
+/* EMBEDDED PROPERTIES */
+
+fieldset.embedded {
+    background-color: transparent;
+    border: 1px solid #CCCCCC;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+fieldset.embedded legend {
+    margin: 0 1em;
+}
+
+/* MESSAGES AND ERRORS */
+
+.errors,
+.message {
+    font-size: 0.8em;
+    line-height: 1.5;
+    margin: 1em 2em;
+    padding: 0.25em;
+}
+
+.message {
+    background: #f3f3ff;
+    border: 1px solid #b2d1ff;
+    color: #006dba;
+    -moz-box-shadow: 0 0 0.25em #b2d1ff;
+    -webkit-box-shadow: 0 0 0.25em #b2d1ff;
+    box-shadow: 0 0 0.25em #b2d1ff;
+    text-align: justify;
+}
+
+.errors {
+    background: #fff3f3;
+    border: 1px solid #ffaaaa;
+    color: #cc0000;
+    -moz-box-shadow: 0 0 0.25em #ff8888;
+    -webkit-box-shadow: 0 0 0.25em #ff8888;
+    box-shadow: 0 0 0.25em #ff8888;
+}
+
+.errors ul,
+.message {
+    padding: 7px;
+}
+
+.errors li {
+    list-style: none;
+    background: transparent url(../images/skin/exclamation.png) 0.5em 7px no-repeat;
+    text-indent: 1.7em;
+}
+
+.message {
+    background: transparent url(../images/skin/information.png) 0.5em 7px no-repeat;
+    text-indent: 1.7em;
+}
+
+/* form fields with errors */
+
+.error input, .error select, .error textarea {
+    background: #fff3f3;
+    border-color: #ffaaaa;
+    color: #cc0000;
+}
+
+.error input:focus, .error select:focus, .error textarea:focus {
+    -moz-box-shadow: 0 0 0.5em #ffaaaa;
+    -webkit-box-shadow: 0 0 0.5em #ffaaaa;
+    box-shadow: 0 0 0.5em #ffaaaa;
+}
+
+/* same effects for browsers that support HTML5 client-side validation (these have to be specified separately or IE will ignore the entire rule) */
+
+input:invalid, select:invalid, textarea:invalid {
+    background: #fff3f3;
+    border-color: #ffaaaa;
+    color: #cc0000;
+}
+
+input:invalid:focus, select:invalid:focus, textarea:invalid:focus {
+    -moz-box-shadow: 0 0 0.5em #ffaaaa;
+    -webkit-box-shadow: 0 0 0.5em #ffaaaa;
+    box-shadow: 0 0 0.5em #ffaaaa;
+}
+
+/* TABLES */
+
+table {
+    border: 7px solid #E1E1E1;
+    width: 98%;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+tr {
+    border: 0;
+}
+
+tr>td:first-child, tr>th:first-child {
+    padding-left: 1.25em;
+}
+
+tr>td:last-child, tr>th:last-child {
+    padding-right: 1.25em;
+}
+
+td, th {
+    line-height: 1.5em;
+    padding: 0.5em 0.6em;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background-color: #efefef;
+    /*
+    background-image: -moz-linear-gradient(top, #ffffff, #eaeaea);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff), color-stop(1, #eaeaea));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#ffffff', EndColorStr = '#eaeaea');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#ffffff', EndColorStr='#eaeaea')";
+    */
+    color: #666666;
+    font-weight: bold;
+    line-height: 1.7em;
+    padding: 0.2em 0.6em;
+}
+
+thead th {
+    white-space: nowrap;
+}
+
+th a {
+    display: block;
+    text-decoration: none;
+}
+
+th a:link, th a:visited {
+    color: #666666;
+}
+
+th a:hover, th a:focus {
+    color: #0E0E0E;
+}
+
+th.sortable a {
+    background-position: right;
+    background-repeat: no-repeat;
+    padding-right: 1.1em;
+}
+
+th.asc a {
+    background-image: url(../images/skin/sorted_asc.gif);
+}
+
+th.desc a {
+    background-image: url(../images/skin/sorted_desc.gif);
+}
+
+.odd {
+    background: #f7f7f7;
+}
+
+.even {
+    background: #ffffff;
+}
+
+/******************************************************************************
+  Breadcrumb
+*******************************************************************************/
+/* line 4, ../sass/_breadcrumb.scss */
+.breadcrumb-box {
+  width: 98%;
+  margin-left:auto;
+  margin-right:auto;
+  overflow: hidden;
+}
+
+/* line 8, ../sass/_breadcrumb.scss */
+.breadcrumb {
+  line-height: 22px;
+  margin: 0;
+  padding: 15px 0px;
+  list-style: none;
+}
+/* line 16, ../sass/_breadcrumb.scss */
+.breadcrumb > li {
+  font-size: 16px;
+  line-height: 12px;
+  text-shadow: none;
+  display: inline-block;
+}
+/* line 20, ../sass/_breadcrumb.scss */
+.breadcrumb > li > a {
+  color: #515151;
+  text-decoration: none;
+  -webkit-transition: opacity .2s linear;
+          transition: opacity .2s linear;
+}
+/* line 25, ../sass/_breadcrumb.scss */
+.breadcrumb > li > a:hover {
+  opacity: .6;
+  filter: alpha(opacity=60);
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+}
+/* line 31, ../sass/_breadcrumb.scss */
+.breadcrumb > li + li:before {
+	padding: 0 4px;
+	color: #515151;
+	font-family: 'FontAwesome';
+	content: "\f105";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 22px;
+}
+
+/* line 37, ../sass/_breadcrumb.scss */
+.breadcrumb-none {
+  height: 10px;
+}
+
+/* line 23, ../sass/bootstrap/_breadcrumbs.scss */
+.breadcrumb > .active {
+  color: #0086CC;
+  font-size: 22px;
+}
+
+/* PAGINATION */
+
+.pagination {
+    border: 1px solid #E1E1E1;
+    width: 98%;
+    margin-left: auto;
+	margin-right: auto;
+	-moz-border-radius: 0em 0em 0.5em 0.5em;
+    -webkit-border-radius: 0em 0em 0.5em 0.5em;
+    border-radius: 0em 0em 0.5em 0.5em;
+    padding: 0.3em 0.2em;
+    text-align: right;
+    background-color: #E1E1E1;
+}
+
+.pagination a,
+.pagination .currentStep {
+    color: #515151;
+    border: 1px solid #ffffff;
+    background-color: #ffffff;
+    display: inline-block;
+    margin: 0 0.1em;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.pagination a:hover, .pagination a:focus{
+	background-color: #CFE1F2;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.pagination .currentStep {
+    background-color: #0086CC;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.no-borderradius .pagination a:hover, .no-borderradius .pagination a:focus,
+.no-borderradius .pagination .currentStep {
+    background-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+}
+
+/* ACTION BUTTONS */
+
+.buttons {
+    background-color: #e1e1e1;
+    overflow: hidden;
+    padding: 0.3em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+    border: none;
+
+    -moz-border-radius: 0.0em 0.0em 0.5em 0.5em;
+    -webkit-border-radius: 0.0em 0.0em 0.5em 0.5em;
+    border-radius: 0.0em 0.0em 0.5em 0.5em;
+}
+
+.buttons input,
+.buttons a {
+    background-color: #005EB8;
+    border-color: #005EB8;
+    color: #ffffff;
+    cursor: pointer; cursor: hand;
+    display: inline-block;
+    margin: 0 0.25em 0;
+    overflow: visible;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.buttons input:hover, .buttons input:focus,
+.buttons a:hover, .buttons a:focus {
+    background-color: #1183C9;
+    border-color: #1183C9;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-weight: normal;
+}
+
+.buttons .delete, .buttons .edit, .buttons .save, .buttons .import, .buttons .login, .buttons .close, .buttons .password {
+    background-position: 0.7em center;
+    background-repeat: no-repeat;
+}
+
+.no-borderradius .buttons input:hover, .no-borderradius .buttons input:focus,
+.no-borderradius .buttons a:hover, .no-borderradius .buttons a:focus {
+    background-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+}
+
+.buttons .create, .buttons .delete, .buttons .edit, .buttons .save, .buttons .import, .buttons .login, .buttons .close, .buttons .password {
+    background-position: 0.7em center;
+    background-repeat: no-repeat;
+	border: 1px solid #e1e1e1;
+	font-size: 14px;
+	height: 38px;
+	line-height: 29px;
+	min-height: 38px;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.buttons .create{
+	border: 1px solid #6BA539;
+    background-color: #6BA539;
+    color: #ffffff;
+}
+.buttons .create:focus, .buttons .create:hover{
+	border: 1px solid #78BE20;
+    background-color: #78BE20;
+}
+
+.buttons .delete{
+	border: 1px solid #DA291C;
+    background-color: #DA291C;
+    color: #ffffff;
+}
+.buttons .delete:focus, .buttons .delete:hover{
+	border: 1px solid #E4002B;
+    background-color: #E4002B;
+}
+
+.buttons .print:before {
+    font-family: 'FontAwesome';
+	content: "\f02f";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .delete:before {
+    font-family: 'FontAwesome';
+	content: "\f1f8";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .create:before {
+    font-family: 'FontAwesome';
+	content: "\f067";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .edit:before {
+    font-family: 'FontAwesome';
+	content: "\f044";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .save:before {
+    font-family: 'FontAwesome';
+	content: "\f0c7";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .close:before {
+    font-family: 'FontAwesome';
+	content: "\f00d";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .password:before {
+    font-family: 'FontAwesome';
+	content: "\f084";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .import:before {
+    font-family: 'FontAwesome';
+	content: "\f093";
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: inherit;
+	font-size: 18px;
+	padding-right: 0.5em;
+}
+
+.buttons .login {
+    background-image: url(../images/skin/login.png);
+}
+
+a.skip {
+    position: absolute;
+    left: -9999px;
+}
+
+.grails-logo-container {
+    margin-bottom: 20px;
+    color: #a7a7a7;
+    height:220px;
+    text-align:center;
+}
+
+img.grails-logo {
+    height:340px;
+    margin-top:-10px;
+}
