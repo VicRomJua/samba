@@ -43,7 +43,7 @@ dependencyManagement {
 
 dependencies {
     compile fileTree(dir: './lib', include: ['*.jar'])
-
+    compile "com.github.jsimone:webapp-runner:8.5.5.0"
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
@@ -102,3 +102,22 @@ assets {
 configurations {
     provided.all*.exclude group: 'javax.servlet'
 }
+task stage() {
+    dependsOn clean, war
+}
+tasks.stage.doLast() {
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/assetCompile")
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/libs", exclude: "*.war")
+}
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
